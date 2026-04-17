@@ -1,4 +1,9 @@
-venv/
-credenciales.json
+venv_limpio/
 descargas control interno/
-.
+Datos*/
+Navegador/
+dist
+build/
+__pycache__/
+descargas*/
+.spec

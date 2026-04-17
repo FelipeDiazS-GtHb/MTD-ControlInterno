@@ -5,10 +5,15 @@ import sys
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
 
-# Si el código se está ejecutando como un .exe (frozen)
+# =====================================================================
+# TRUCO MAESTRO PARA PYINSTALLER + PLAYWRIGHT (SOLO CHROMIUM)
+# =====================================================================
 if getattr(sys, 'frozen', False):
-    # Obligamos a Playwright a buscar el navegador dentro del .exe temporal
-    os.environ['PLAYWRIGHT_BROWSERS_PATH'] = os.path.join(sys._MEIPASS, 'playwright', 'driver', 'package', '.local-browsers')
+    # En el .exe, buscará Chromium en una carpeta interna llamada "Navegador"
+    os.environ['PLAYWRIGHT_BROWSERS_PATH'] = os.path.join(sys._MEIPASS, 'Navegador')
+else:
+    # Para cuando pruebes el código normal sin empaquetar
+    os.environ['PLAYWRIGHT_BROWSERS_PATH'] = 'Navegador'
 # =====================================================================
 
 def esperar_pantalla_carga(page):
