@@ -399,7 +399,7 @@ def ejecutar_descargas(usuario, password, anio, mes):
             print("\n--- SECCIÓN: RUTERO ---")
 
             page.goto(
-                "https://saludgestiona.com/business/reports",
+                "https://dev.saludgestiona.com/business/reports",
                 wait_until="networkidle",
             )
             esperar_pantalla_carga(page)

@@ -185,6 +185,10 @@ HOMOLOGACION_RUTERO = {
         "tipo_2": "MEDICINA ESPECIALIZADA FISIATRIA",
         "codigo": 0,
     },
+    "MEDICINA ESPECIALIZADA MEDICINA INTERNA": {
+    "tipo_2": "MEDICINA ESPECIALIZADA MEDICINA INTERNA",
+    "codigo": 0,
+    },
     "PSICOLOGIA": {
         "tipo_2": "PSICOLOGIA",
         "codigo": 0,
